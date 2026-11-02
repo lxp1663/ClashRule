@@ -1,0 +1,538 @@
+# Converted from LxiaopangClashRule.ini; add nodes using Sub-Store file Add Proxies operation.
+mixed-port: 7890
+allow-lan: false
+mode: rule
+log-level: info
+ipv6: false
+unified-delay: true
+tcp-concurrent: true
+profile:
+  store-selected: true
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: fake-ip
+  nameserver:
+  - https://223.5.5.5/dns-query
+  - https://1.1.1.1/dns-query
+proxies: []
+proxy-groups:
+- name: 🚀 节点选择
+  type: select
+  proxies:
+  - 香港
+  - 🚀 手动切换1
+  - ♻️ 自动选择
+  - 机场
+  - 🚀 手动切换2
+  - 🚀 手动切换3
+  - HY
+  - GW
+  - AZ
+  - 日本
+  - 新加坡
+  - 美国
+  - 台湾
+  - DIRECT
+- name: 🚀 手动切换1
+  type: select
+  proxies:
+  - DIRECT
+  include-all-proxies: true
+- name: 🚀 手动切换2
+  type: select
+  proxies:
+  - DIRECT
+  include-all-proxies: true
+- name: 🚀 手动切换3
+  type: select
+  proxies:
+  - DIRECT
+  include-all-proxies: true
+- name: 📲 电报消息
+  type: select
+  proxies:
+  - 香港
+  - 🚀 手动切换1
+  - 新加坡
+  - 🚀 手动切换2
+  - HY
+  - GW
+  - 🚀 节点选择
+  - AZ
+  - ♻️ 自动选择
+  - 日本
+  - 机场
+  - 🚀 手动切换3
+  - 美国
+  - 台湾
+  - DIRECT
+- name: 🗺 91卫图
+  type: select
+  proxies:
+  - 香港
+  - ♻️ 自动选择
+  - 🚀 手动切换2
+  - 机场
+  - AZ
+  - 🚀 手动切换1
+  - 🚀 手动切换3
+  - HY
+  - 🚀 节点选择
+  - GW
+  - 日本
+  - 新加坡
+  - 美国
+  - 台湾
+  - DIRECT
+- name: 📹 油管视频
+  type: select
+  proxies:
+  - 🚀 手动切换3
+  - 🚀 节点选择
+  - ♻️ 自动选择
+  - GW
+  - 香港
+  - AZ
+  - HY
+  - 日本
+  - 机场
+  - 🚀 手动切换1
+  - 🚀 手动切换2
+  - 新加坡
+  - 美国
+  - 台湾
+  - DIRECT
+- name: ⚡ Speedtest
+  type: select
+  proxies:
+  - DIRECT
+  - 🚀 节点选择
+  - ♻️ 自动选择
+  - GW
+  - 香港
+  - AZ
+  - HY
+  - 日本
+  - 🚀 手动切换1
+  - 🚀 手动切换2
+  - 🚀 手动切换3
+  - 新加坡
+  - 美国
+  - 台湾
+  - 机场
+- name: 📡 ChatGPT
+  type: select
+  proxies:
+  - 🚀 手动切换3
+  - 美国
+  - WB
+  - AZ
+  - 🚀 手动切换1
+  - 🚀 手动切换2
+  - 🚀 节点选择
+  - ♻️ 自动选择
+  - GW
+  - HY
+  - 香港
+  - 日本
+  - 新加坡
+  - 台湾
+  - 机场
+  - DIRECT
+- name: 🎬 EMBY
+  type: select
+  proxies:
+  - 🚀 手动切换3
+  - 美国
+  - WB
+  - 机场
+  - 香港
+  - HY
+  - GW
+  - 🚀 手动切换1
+  - AZ
+  - 🚀 节点选择
+  - DIRECT
+  - ♻️ 自动选择
+  - 新加坡
+  - 台湾
+  - 日本
+  - 🚀 手动切换2
+- name: Ⓜ️ 必应
+  type: select
+  proxies:
+  - 🚀 手动切换3
+  - 美国
+  - WB
+  - AZ
+  - HY
+  - 🚀 节点选择
+  - 香港
+  - GW
+  - 日本
+  - DIRECT
+  - 🚀 手动切换1
+  - 🚀 手动切换2
+  - 新加坡
+  - 台湾
+  - 机场
+- name: 🎯 全球直连
+  type: select
+  proxies:
+  - DIRECT
+  - 🚀 节点选择
+  - ♻️ 自动选择
+- name: 🐟 漏网之鱼
+  type: select
+  proxies:
+  - 🚀 节点选择
+  - DIRECT
+  - ♻️ 自动选择
+  - GW
+  - 香港
+  - AZ
+  - HY
+  - 日本
+  - 🚀 手动切换1
+  - 🚀 手动切换2
+  - 🚀 手动切换3
+  - 新加坡
+  - 美国
+  - 台湾
+  - 机场
+- name: 香港
+  type: url-test
+  include-all-proxies: true
+  filter: (?i)(港|HK|Hong)
+  exclude-filter: 游戏流媒体|送中
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+- name: 美国
+  type: url-test
+  include-all-proxies: true
+  filter: (?i)(美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States)
+  exclude-filter: 游戏
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+- name: ♻️ 自动选择
+  type: url-test
+  include-all-proxies: true
+  filter: .*
+  exclude-filter: 游戏流媒体
+  url: https://cp.cloudflare.com/generate_204
+  interval: 300
+  tolerance: 50
+- name: 机场
+  type: url-test
+  include-all-proxies: true
+  filter: (?i)(港|HK|Hong|日本|JP|Japan|新加坡|SG|Singapore|台|TW|Taiwan|Tai wan)
+  exclude-filter: (?i)(游戏流媒体|cz|bz|ch|cc|cr|ws|ts|hy|ms|gcp|aws|ka|kb|kc|by|cw|bw|wb)
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+- name: 日本
+  type: url-test
+  include-all-proxies: true
+  filter: (?i)(日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan)
+  exclude-filter: 游戏流媒体
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+- name: 新加坡
+  type: url-test
+  include-all-proxies: true
+  filter: (?i)(新加坡|狮|獅|SG|Singapore)
+  exclude-filter: 游戏流媒体
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+- name: 台湾
+  type: url-test
+  include-all-proxies: true
+  filter: (?i)(台|新北|彰化|TW|Taiwan|Tai wan)
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+- name: GW
+  type: url-test
+  include-all-proxies: true
+  filter: (?i)(bw|1663|wb|bz|cz|nr|bread)
+  exclude-filter: 游戏流媒体
+  url: https://www.gstatic.com/generate_204
+  interval: 300
+  tolerance: 50
+- name: HY
+  type: url-test
+  include-all-proxies: true
+  filter: (?i)(wb|1663|nr|bread)
+  url: https://cp.cloudflare.com/generate_204
+  interval: 300
+  tolerance: 50
+- name: AZ
+  type: url-test
+  include-all-proxies: true
+  filter: (?i)(cz|bz)
+  url: https://cp.cloudflare.com/generate_204
+  interval: 300
+  tolerance: 50
+- name: BZ
+  type: url-test
+  include-all-proxies: true
+  filter: (?i)bz
+  url: https://cp.cloudflare.com/generate_204
+  interval: 300
+  tolerance: 50
+- name: WB
+  type: url-test
+  include-all-proxies: true
+  filter: (?i)wb
+  url: https://cp.cloudflare.com/generate_204
+  interval: 300
+  tolerance: 50
+rule-providers:
+  ini_01:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/lxp1663/ClashRule/main/ChatGPT.list
+    path: ./ruleset/ini_01.list
+    interval: 86400
+  ini_02:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Gemini/Gemini.list
+    path: ./ruleset/ini_02.list
+    interval: 86400
+  ini_03:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/OpenAI/OpenAI.list
+    path: ./ruleset/ini_03.list
+    interval: 86400
+  ini_04:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/lxp1663/ClashRule/main/bing.list
+    path: ./ruleset/ini_04.list
+    interval: 86400
+  ini_05:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/lxp1663/ClashRule/main/GooglePlay.list
+    path: ./ruleset/ini_05.list
+    interval: 86400
+  ini_06:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Speedtest/Speedtest.list
+    path: ./ruleset/ini_06.list
+    interval: 86400
+  ini_07:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/lxp1663/ClashRule/main/zijigwf.list
+    path: ./ruleset/ini_07.list
+    interval: 86400
+  ini_08:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/lxp1663/ClashRule/main/91weitu.list
+    path: ./ruleset/ini_08.list
+    interval: 86400
+  ini_09:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/lxp1663/ClashRule/main/91weitunew.list
+    path: ./ruleset/ini_09.list
+    interval: 86400
+  ini_10:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/lxp1663/ClashRule/main/zijiyuming.list
+    path: ./ruleset/ini_10.list
+    interval: 86400
+  ini_11:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/LocalAreaNetwork.list
+    path: ./ruleset/ini_11.list
+    interval: 86400
+  ini_12:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/UnBan.list
+    path: ./ruleset/ini_12.list
+    interval: 86400
+  ini_13:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/GoogleFCM.list
+    path: ./ruleset/ini_13.list
+    interval: 86400
+  ini_14:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/GoogleCN.list
+    path: ./ruleset/ini_14.list
+    interval: 86400
+  ini_15:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/SteamCN.list
+    path: ./ruleset/ini_15.list
+    interval: 86400
+  ini_16:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/OneDrive.list
+    path: ./ruleset/ini_16.list
+    interval: 86400
+  ini_17:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list
+    path: ./ruleset/ini_17.list
+    interval: 86400
+  ini_18:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list
+    path: ./ruleset/ini_18.list
+    interval: 86400
+  ini_19:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/Meilieage/webcdn/main/rule/list/Emby.list
+    path: ./ruleset/ini_19.list
+    interval: 86400
+  ini_20:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/lxp1663/ClashRule/main/emby.list
+    path: ./ruleset/ini_20.list
+    interval: 86400
+  ini_21:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/lxp1663/ClashRule/main/embyip.list
+    path: ./ruleset/ini_21.list
+    interval: 86400
+  ini_22:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.list
+    path: ./ruleset/ini_22.list
+    interval: 86400
+  ini_23:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/YouTube.list
+    path: ./ruleset/ini_23.list
+    interval: 86400
+  ini_24:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GlobalMedia/GlobalMedia.list
+    path: ./ruleset/ini_24.list
+    interval: 86400
+  ini_25:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyMedia.list
+    path: ./ruleset/ini_25.list
+    interval: 86400
+  ini_26:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ProxyGFWlist.list
+    path: ./ruleset/ini_26.list
+    interval: 86400
+  ini_27:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMax/ChinaMax.list
+    path: ./ruleset/ini_27.list
+    interval: 86400
+  ini_28:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaDomain.list
+    path: ./ruleset/ini_28.list
+    interval: 86400
+  ini_29:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
+    path: ./ruleset/ini_29.list
+    interval: 86400
+  ini_30:
+    type: http
+    behavior: classical
+    format: text
+    url: https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list
+    path: ./ruleset/ini_30.list
+    interval: 86400
+rules:
+- RULE-SET,ini_01,📡 ChatGPT
+- RULE-SET,ini_02,📡 ChatGPT
+- RULE-SET,ini_03,📡 ChatGPT
+- RULE-SET,ini_04,Ⓜ️ 必应
+- RULE-SET,ini_05,🚀 节点选择
+- RULE-SET,ini_06,⚡ Speedtest
+- RULE-SET,ini_07,AZ
+- RULE-SET,ini_08,REJECT
+- RULE-SET,ini_09,🗺 91卫图
+- RULE-SET,ini_10,🎯 全球直连
+- RULE-SET,ini_11,🎯 全球直连
+- RULE-SET,ini_12,🎯 全球直连
+- RULE-SET,ini_13,DIRECT
+- RULE-SET,ini_14,🎯 全球直连
+- RULE-SET,ini_15,🎯 全球直连
+- RULE-SET,ini_16,DIRECT
+- RULE-SET,ini_17,DIRECT
+- RULE-SET,ini_18,DIRECT
+- RULE-SET,ini_19,🎬 EMBY
+- RULE-SET,ini_20,🎬 EMBY
+- RULE-SET,ini_21,🎬 EMBY
+- RULE-SET,ini_22,📲 电报消息
+- RULE-SET,ini_23,📹 油管视频
+- RULE-SET,ini_24,🚀 节点选择
+- RULE-SET,ini_25,🚀 节点选择
+- RULE-SET,ini_26,🚀 节点选择
+- RULE-SET,ini_27,🎯 全球直连
+- RULE-SET,ini_28,🎯 全球直连
+- RULE-SET,ini_29,🎯 全球直连
+- RULE-SET,ini_30,🎯 全球直连
+- GEOIP,CN,🎯 全球直连
+- MATCH,🐟 漏网之鱼
