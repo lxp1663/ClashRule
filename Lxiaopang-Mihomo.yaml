@@ -1,4 +1,3 @@
-# Converted from LxiaopangClashRule.ini; add nodes using Sub-Store file Add Proxies operation.
 mixed-port: 7890
 allow-lan: false
 mode: rule
@@ -38,17 +37,14 @@ proxy-groups:
   type: select
   proxies:
   - DIRECT
-  include-all-proxies: true
 - name: 🚀 手动切换2
   type: select
   proxies:
   - DIRECT
-  include-all-proxies: true
 - name: 🚀 手动切换3
   type: select
   proxies:
   - DIRECT
-  include-all-proxies: true
 - name: 📲 电报消息
   type: select
   proxies:
@@ -203,95 +199,83 @@ proxy-groups:
   - 机场
 - name: 香港
   type: url-test
-  include-all-proxies: true
-  filter: (?i)(港|HK|Hong)
-  exclude-filter: 游戏流媒体|送中
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
+  _substore-order-filter: (?i)(港|HK|Hong)
+  _substore-order-exclude-filter: 游戏流媒体|送中
 - name: 美国
   type: url-test
-  include-all-proxies: true
-  filter: (?i)(美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States)
-  exclude-filter: 游戏
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
+  _substore-order-filter: (?i)(美|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|US|United States)
+  _substore-order-exclude-filter: 游戏
 - name: ♻️ 自动选择
   type: url-test
-  include-all-proxies: true
-  filter: .*
-  exclude-filter: 游戏流媒体
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   tolerance: 50
+  _substore-order-filter: .*
+  _substore-order-exclude-filter: 游戏流媒体
 - name: 机场
   type: url-test
-  include-all-proxies: true
-  filter: (?i)(港|HK|Hong|日本|JP|Japan|新加坡|SG|Singapore|台|TW|Taiwan|Tai wan)
-  exclude-filter: (?i)(游戏流媒体|cz|bz|ch|cc|cr|ws|ts|hy|ms|gcp|aws|ka|kb|kc|by|cw|bw|wb)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
+  _substore-order-filter: (?i)(港|HK|Hong|日本|JP|Japan|新加坡|SG|Singapore|台|TW|Taiwan|Tai wan)
+  _substore-order-exclude-filter: (?i)(游戏流媒体|cz|bz|ch|cc|cr|ws|ts|hy|ms|gcp|aws|ka|kb|kc|by|cw|bw|wb)
 - name: 日本
   type: url-test
-  include-all-proxies: true
-  filter: (?i)(日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan)
-  exclude-filter: 游戏流媒体
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
+  _substore-order-filter: (?i)(日本|川日|东京|大阪|泉日|埼玉|沪日|深日|JP|Japan)
+  _substore-order-exclude-filter: 游戏流媒体
 - name: 新加坡
   type: url-test
-  include-all-proxies: true
-  filter: (?i)(新加坡|狮|獅|SG|Singapore)
-  exclude-filter: 游戏流媒体
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
+  _substore-order-filter: (?i)(新加坡|狮|獅|SG|Singapore)
+  _substore-order-exclude-filter: 游戏流媒体
 - name: 台湾
   type: url-test
-  include-all-proxies: true
-  filter: (?i)(台|新北|彰化|TW|Taiwan|Tai wan)
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
+  _substore-order-filter: (?i)(台|新北|彰化|TW|Taiwan|Tai wan)
 - name: GW
   type: url-test
-  include-all-proxies: true
-  filter: (?i)(bw|1663|wb|bz|cz|nr|bread)
-  exclude-filter: 游戏流媒体
   url: https://www.gstatic.com/generate_204
   interval: 300
   tolerance: 50
+  _substore-order-filter: (?i)(bw|1663|wb|bz|cz|nr|bread)
+  _substore-order-exclude-filter: 游戏流媒体
 - name: HY
   type: url-test
-  include-all-proxies: true
-  filter: (?i)(wb|1663|nr|bread)
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   tolerance: 50
+  _substore-order-filter: (?i)(wb|1663|nr|bread)
 - name: AZ
   type: url-test
-  include-all-proxies: true
-  filter: (?i)(cz|bz)
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   tolerance: 50
+  _substore-order-filter: (?i)(cz|bz)
 - name: BZ
   type: url-test
-  include-all-proxies: true
-  filter: (?i)bz
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   tolerance: 50
+  _substore-order-filter: (?i)bz
 - name: WB
   type: url-test
-  include-all-proxies: true
-  filter: (?i)wb
   url: https://cp.cloudflare.com/generate_204
   interval: 300
   tolerance: 50
+  _substore-order-filter: (?i)wb
 rule-providers:
   ini_01:
     type: http
