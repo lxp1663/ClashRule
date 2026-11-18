@@ -570,7 +570,7 @@ const rules = [
   "RULE-SET,googleplay_custom,🚀 节点选择",
   "RULE-SET,speedtest,⚡ Speedtest",
 
-  "RULE-SET,az_custom,AZ",
+  "RULE-SET,az_custom,🚀 节点选择",
   "RULE-SET,reject_91weitu,REJECT",
   "RULE-SET,91weitu_custom,🗺 91卫图",
   "RULE-SET,domain_custom,🎯 全球直连",
